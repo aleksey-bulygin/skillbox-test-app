@@ -1,0 +1,1 @@
+insert into text_container values(1, 'test_data');

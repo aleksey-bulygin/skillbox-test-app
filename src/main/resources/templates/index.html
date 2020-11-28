@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <img th:src="@{logo.jpg}" width="350" height="350" />
+    <link rel="stylesheet" type="text/css" th:href="@{style.css}"/>
+</head>
+<body>
+    <form action="#" th:action="@{/}" th:object="${textContainer}" method="post">
+        <input type="text" th:field="*{text}" /> <input type="submit" value="save" />
+
+        <div class="validation-message" th:switch="${isValidText}">
+            <p th:case="false">input is blank or missing length limits</p>
+        </div>
+    </form>
+</body>
+</html>
